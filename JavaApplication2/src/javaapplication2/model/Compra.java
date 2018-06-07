@@ -11,21 +11,21 @@ package javaapplication2.model;
  */
 public class Compra {
     
-    private double valor;
+    private double valorTotal;
     private int quantidade;
 
     public Compra(double valor, int quantidade) {
-        this.valor = valor;
+        this.valorTotal = valor;
         this.quantidade = quantidade;
     }
 
 
-    public double getValor() {
-        return valor;
+    public double getValorTotal() {
+        return valorTotal;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
     }
 
     public int getQuantidade() {

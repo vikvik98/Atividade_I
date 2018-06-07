@@ -8,6 +8,7 @@ package cases;
 import java.util.ArrayList;
 import java.util.List;
 import javaapplication2.model.Cliente;
+import javaapplication2.model.Compra;
 
 /**
  *
@@ -19,6 +20,20 @@ public class CompraUseCase {
 
     public CompraUseCase() {
         this.clientes = new ArrayList();
+    }
+    
+    public void cadastrarCompra(int pontos, double valorTotal, int quantidade){
+        Compra compra = new Compra(valorTotal,quantidade);
+        Cliente cliente = new Cliente(pontos, compra);
+        clientes.add(cliente);
+    }
+
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
     }
     
     

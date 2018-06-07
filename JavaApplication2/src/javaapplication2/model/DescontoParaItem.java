@@ -12,17 +12,16 @@ import java.util.List;
  * @author ALUNO
  */
 public class DescontoParaItem {
-    
-    private List<Cliente> clientes;
 
-    public DescontoParaItem(List<Cliente> clientes) {
-        this.clientes = clientes;
+    public DescontoParaItem() {
     }
     
-    public void descontoParaItens(){
-        for(int i = 0; i < clientes.size(); i++){            
-            clientes.get(i).getCompra().setValor(clientes.get(i).getCompra().getValor() - (clientes.get(i).getCompra().getValor()*10)/100);            
-        }
+    
+    
+    public void descontoParaItens(Cliente cliente){
+        
+        cliente.getCompra().setValorTotal(cliente.getCompra().getValorTotal() - (cliente.getCompra().getValorTotal()*10)/100);
+        
     }
     
 }

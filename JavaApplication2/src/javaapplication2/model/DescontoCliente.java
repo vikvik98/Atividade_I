@@ -10,17 +10,15 @@ package javaapplication2.model;
  * @author ALUNO
  */
 public class DescontoCliente {
-    
-    private Cliente cliente;
 
-    public DescontoCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public DescontoCliente() {
     }
     
-    public double descontoCliente(Cliente cliente){
+    
+    
+    public void descontoCliente(Cliente cliente){
         
-        valorTotal = valorTotal - ((valorTotal*5)/100);
-        return valorTotal;
+        cliente.getCompra().setValorTotal(cliente.getCompra().getValorTotal() - (cliente.getCompra().getValorTotal()*5)/100);
         
     }
     

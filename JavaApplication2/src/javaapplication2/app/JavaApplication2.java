@@ -5,6 +5,9 @@
  */
 package javaapplication2.app;
 
+import cases.CompraUseCase;
+import helper.Factores;
+
 /**
  *
  * @author ALUNO
@@ -16,6 +19,13 @@ public class JavaApplication2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        CompraUseCase compraUseCase = new CompraUseCase();
+        compraUseCase.cadastrarCompra(100, 100, 10);
+        Factores factores = new Factores(compraUseCase.getClientes());
+        factores.aplicarDesconto();
+        
+        System.out.println("Valor total da compra = " + compraUseCase.getClientes().get(0).getCompra().getValorTotal());
+        
     }
     
 }
